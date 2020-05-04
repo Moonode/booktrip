@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bookshelf/bookshelf",
+    "pages/mail/mail",
+    "pages/plan/plan"
+  ],
+  "window": {
+    "backgroundColor": "#F1F1F1",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/read.png",
+        "selectedIconPath": "images/tabbar/read_a.png"
+      },
+      {
+        "pagePath": "pages/bookshelf/bookshelf",
+        "iconPath": "images/tabbar/bookshelf.png",
+        "selectedIconPath": "images/tabbar/bookshelf_a.png"
+      },
+      {
+        "pagePath": "pages/mail/mail",
+        "iconPath": "images/tabbar/mail.png",
+        "selectedIconPath": "images/tabbar/mail_a.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
