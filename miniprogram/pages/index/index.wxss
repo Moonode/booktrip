@@ -1,1 +1,247 @@
-/* miniprogram/pages/index/index.wxss */
+.avatar {
+    margin-top: 140rpx;
+    margin-left: 82rpx;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 20rpx;
+}
+
+.day {
+    position: absolute;
+    top: 158rpx;
+    left: 598rpx;
+    height: 80rpx;
+    width: 80rpx;
+    text-align: center;
+}
+
+.day-number {
+    height: 62rpx;
+    font-size: 62rpx;
+}
+
+.day-text {
+    margin-top: 6rpx;
+    height: 18rpx;
+    font-size: 18rpx;
+}
+
+.book-container {
+    height: 420rpx;
+    margin-top: 130rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.book-wrapper {
+    width: 608rpx;
+    display: flex;
+}
+
+.book-img-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.book-img-bookmark {
+    position: absolute;
+    left: 70rpx;
+    top: -40rpx;
+    width: 36rpx;
+}
+
+.book-img-text {
+    position: absolute;
+    left: 122rpx;
+    top: -22rpx;
+    font-size: 22rpx;
+    opacity: 0.46;
+}
+
+.book-img {
+    width: 304rpx;
+    height: 420rpx;
+}
+
+.book-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.book-info-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.book-info-title {
+    font-size: 44rpx;
+}
+
+.book-info-text {
+    font-size: 32rpx;
+}
+
+
+.book-info-bottom-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.book-info-bottom {
+    width: 186rpx;
+    height: 60%;
+}
+
+.book-info-time {
+    font-size: 22rpx;
+}
+
+.book-info-progress {
+    font-size: 22rpx;
+}
+
+.book-info-progressbar-wrapper {
+    height: 24rpx;
+    width: 178rpx;
+}
+
+.book-info-progressbar {
+
+}
+
+.book-info-changeplan {
+    width: 118rpx;
+    height: 38rpx;
+    margin-left: 68rpx;
+    line-height: 38rpx;
+    text-align: center;
+    font-size: 22rpx;
+    background-color: #ffffff;
+    color: #707070;
+    border-radius: 102rpx;
+}
+
+.start-wrapper {
+    margin-top: 108rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    width: 178rpx;
+    height: 178rpx;
+    line-height: 178rpx;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 36rpx;
+    background-color: #97C0BD;
+    color: #ffffff;
+}
+
+.new {
+    position: fixed;
+    right: calc(100vw / 6 - 30.5px);
+    bottom: -1vh;
+    width: 61px;
+    height: 53px;
+}
+
+.new image {
+    width: 100%;
+    height: 100%;
+}
+
+.book-container-u {
+    margin-top: 82rpx;
+    height: 482rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.book-wrapper-u {
+    width: 578rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 6rpx 10rpx rgba(0, 0, 0, 0.16);
+    border-radius: 28rpx;
+}
+
+.book-container-u image {
+    width: 208rpx;
+    height: 188rpx;
+}
+
+.book-container-u text {
+    font-weight: bold;
+}
+
+.book-text-u {
+    margin-top: 20rpx;
+    font-size: 26rpx;
+}
+
+.scan-container {
+   height: 122rpx;
+   margin-top: 112rpx;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.scan-wrapper {
+    width: 342rpx;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #97C0BD;
+    box-shadow: 0rpx 6rpx 10rpx rgba(0, 0, 0, 0.16);
+    border-radius: 76rpx;
+}
+
+.scan-wrapper image {
+    width: 58rpx;
+    height: 50rpx;
+}
+
+.scan-wrapper text {
+    padding-left: 20rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.isbn-text-wrapper {
+    height: 22rpx;
+    margin-top: 20rpx;
+    opacity: 0.42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.isbn-text-wrapper image {
+    width: 22rpx;
+    height: 22rpx;
+}
+
+.isbn-text-wrapper text {
+    padding-left: 8rpx;
+    font-size: 22rpx;
+}

@@ -1,10 +1,17 @@
 // miniprogram/pages/plan/plan.js
+const Datetime = require('../../utils/Datetime');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    step: 3,
+    backLock: false,
+    percent: 50,
+    bookInfo: {},
+    completeDate: '',
 
   },
 
@@ -12,7 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -28,39 +35,17 @@ Page({
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  back() {
+    if (this.data.backLock) return;
+    this.setData({ backLock: true });
+    wx.navigateBack({
+      delta: 1,
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  bindDateChange(e) {
+    const { value } = e.detail;
+    this.setData({
+      date: value
+    })
   }
 })

@@ -1,0 +1,73 @@
+<cover-image class="back" src="../../images/book/back.png" bindtap="back"></cover-image>
+<block wx:if="{{step===1}}">
+    <cover-view class="progressbar-container">
+        <cover-view class="progressbar-img">
+            <cover-view class="progressbar"></cover-view>
+            <cover-view class="progress-dot progress-dot-active">1</cover-view>
+            <cover-view class="progress-dot">2</cover-view>
+            <cover-view class="progress-dot">3</cover-view>
+        </cover-view>
+        <cover-view class="progressbar-text white">
+            <cover-view class="progressbar-title progressbar-title-active">扫码录入书目</cover-view>
+            <cover-view class="progressbar-title">确认书籍信息</cover-view>
+            <cover-view class="progressbar-title">制定阅读计划</cover-view>
+        </cover-view>
+    </cover-view>
+    <cover-view class="mask">
+        <cover-view class="border-container">
+            <cover-view class="border">
+                <!-- <cover-image/> -->
+            </cover-view>
+        </cover-view>
+        <cover-view class="text">对准图书条形码自动扫描</cover-view>
+    </cover-view>
+    <camera mode="scanCode" bindscancode=""></camera>
+</block>
+<block wx:if="{{step===2 || step===3}}">
+    <view class="progressbar-container">
+        <view class="progressbar-img">
+            <progress class="progressbar" stroke-width="2" active-color="#6c6c6c" color="#b5b5b5" active="{{true}}" percent="{{percent}}" duration="15"></progress>
+            <view class="progress-dot progress-dot-active">1</view>
+            <view class="progress-dot">2</view>
+            <view class="progress-dot">3</view>
+        </view>
+        <view class="progressbar-text black">
+            <view class="progressbar-title progressbar-title-active">扫码录入书目</view>
+            <view class="progressbar-title">确认书籍信息</view>
+            <view class="progressbar-title">制定阅读计划</view>
+        </view>
+    </view>
+</block>
+<block wx:if="{{step===2}}">
+    <view class="container-2">
+        <image src="{{bookInfo.imgUrl}}" class="img-2" />
+        <view class="title-2">《{{bookInfo.title}}》</view>
+        <view class="text-2">作者：{{bookInfo.author}}</view>
+        <view class="text-2">页数：{{bookInfo.page}}</view>
+        <view class="text-2">类别：{{bookInfo.category}}</view>
+        <view class="button-2">下一步</view>
+        <view class="refresh-2">
+            <image src="../../images/plan/refresh.png" />
+            <text>不是这本，点击刷新书籍信息</text>
+        </view>
+    </view>
+</block>
+<block wx:if="{{step===3}}">
+    <view class="container-3">
+        <view class="bookinfo-container-3">
+            <image src="{{bookinfo.imgUrl}}"/>
+            <view class="bookinfo-3">
+                <view class="bookinfo-title-3">《{{bookinfo.title}}》</view>
+                <view class="bookinfo-text-3">作者：{{bookinfo.author}}</view>
+                <view class="bookinfo-text-3">页数：{{bookinfo.page}}</view>
+                <view class="bookinfo-text-3">类别：{{bookinfo.category}}</view>
+            </view>
+        </view>
+        <view class="panel-container"></view>
+        <view class="complete">完成</view>
+    </view>
+    <view class="panel">
+        <view class="tip-text">计划完成时间</view>
+        <view class="complete-date">{{completeDate}}</view>
+    </view>
+</block>

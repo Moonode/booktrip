@@ -6,14 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    day: 30,
+    bookmark: 0,
+    name: '《A杖刷新大》',
+    bookImgUrl: '',
+    duration: 30,
+    currentProgress: 18,
+    totalProgress: 180,
+    newMessage: false,
+    logined: false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -29,39 +37,9 @@ Page({
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  importBook() {
+    wx.navigateTo({
+      url: '../plan/plan',
+    })
   },
 })
