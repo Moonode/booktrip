@@ -1,0 +1,22 @@
+.text {
+    font-size: 28rpx;
+    color: #212832;
+}
+
+picker-view {
+    height: 220rpx;
+    background-color: #ffffff;
+}
+
+picker-view-column {
+    text-align: center;
+}
+
+.indicator {
+    height: 40rpx;
+    width: 90rpx;
+}
+
+.selected {
+    color: #86B0AD;
+}

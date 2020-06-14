@@ -1,0 +1,23 @@
+<tabs tabs="{{tabs}}" bindchange="tabsChange">
+    <view class="mail-container {{current !== 0 ? 'disappear' : 'appear'}}">
+        <taskcard mode="plain" background="#ffffff">
+            <image slot="image" src="../../images/book/book.png" />
+            <view slot="top">第一封信</view>
+            <view slot="bottom">想读又读不进去该怎么办呢</view>
+        </taskcard>
+        <taskcard mode="plain" background="#ffffff">
+            <image slot="image" src="../../images/book/book.png" />
+            <view slot="top">第一封信</view>
+            <view slot="bottom">想读又读不进去该怎么办呢</view>
+        </taskcard>
+    </view>
+    <view class="achievement-container {{current !== 1 ? 'disappear' : 'appear'}}">
+        <taskcard mode="achievement" background="#86B0AD">
+            <image slot="image" src="../../images/book/book.png" />
+            <view slot="top">拾起您的阅读习惯</view>
+            <view slot="mid">为什么要阅读？</view>
+            <view slot="bottom">怎样保持阅读习惯？</view>
+            <view slot="bottom-tip">3/10</view>
+        </taskcard>
+    </view>
+</tabs>

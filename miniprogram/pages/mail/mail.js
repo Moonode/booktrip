@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    tabs: [
+      {
+        value: '信件',
+        isActive: true,
+      },
+      {
+        value: '成就',
+        isActive: false,
+      }
+    ],
+    current: 0,
   },
 
   /**
@@ -62,5 +72,9 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  tabsChange(e) {
+    const { current } = e.detail;
+    this.setData({ current });
   }
 })

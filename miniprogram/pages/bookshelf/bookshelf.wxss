@@ -1,1 +1,240 @@
-/* miniprogram/pages/bookshelf/bookshelf.wxss */
+.wrapper {
+    position: absolute;
+}
+
+.title {
+    margin-top: 86rpx;
+    margin-left: 50rpx;
+    font-size: 48rpx;
+}
+
+.tip {
+    position: absolute;
+    top: 122rpx;
+    right: 48rpx;
+    font-size: 22rpx;
+    color: rgba(33, 40, 50, 1);
+    opacity: 0.31;
+}
+
+.container {
+    margin-left: 12rpx;
+}
+
+shelf {
+    margin-top: 68rpx;
+}
+
+.detail-container {}
+
+.back-container {
+    position: absolute;
+    top: 106rpx;
+    left: 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-img {
+    width: 24rpx;
+    height: 38rpx;
+    border: none;
+    box-shadow: none;
+}
+
+.back-title {
+    color: #212832;
+    font-size: 44rpx;
+    margin-left: 12rpx;
+}
+
+.top-bookInfo {
+    position: absolute;
+    top: 132rpx;
+    right: 82rpx;
+    color: #212832;
+    font-size: 22rpx;
+    opacity: 0.6;
+}
+
+.bookInfo-container {
+    margin-top: 222rpx;
+    height: 234rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookInfo-img-wrapper {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookInfo-img {
+    width: 164rpx;
+    height: 234rpx;
+    box-shadow: 0rpx 3rpx 5rpx rgba(0, 0, 0, 0.16);
+    border-radius: 5rpx;
+}
+
+.bookInfo-detail-container {
+    flex: 5;
+}
+
+.bookInfo-detail {
+    float: left;
+    width: 160rpx;
+    height: 120rpx;
+}
+
+.bookInfo-detail-title {
+    font-size: 22rpx;
+}
+
+.bookInfo-detail-content {
+    margin-top: 26rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.experience-container {
+    width: 100%;
+    height: 558rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70rpx;
+}
+
+.experience-wrapper {
+    width: 650rpx;
+    height: 558rpx;
+    background-color: #ffffff;
+    box-shadow: 0rpx 6rpx 10rpx rgba(0, 0, 0, 0.16);
+    border-radius: 10rpx;
+}
+
+.experience-title-wrapper {
+    position: relative;
+    height: 92rpx;
+}
+
+.experience-title {
+    position: absolute;
+    top: 22rpx;
+    left: 28rpx;
+    color: #212832;
+    font-size: 32rpx;
+}
+
+.experience-title-number-wrapper {
+    position: absolute;
+    right: 40rpx;
+    top: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22rpx;
+    color: rgba(33, 40, 50, 1);
+    opacity: 0.6;
+}
+
+.experience-title-number {}
+
+.experience-title-number-img {
+    width: 12rpx;
+    height: 18rpx;
+    margin-left: 10rpx;
+    border: none;
+    box-shadow: none;
+}
+
+.experience-title-line {
+    position: absolute;
+    bottom: 0;
+    width: 650rpx;
+    height: 0;
+    border: 1rpx solid rgba(112, 112, 112, 1);
+    opacity: 0.1;
+}
+
+.experience-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 466rpx; */
+}
+
+.experience-content {
+    width: 554rpx;
+    margin-top: 48rpx;
+    /* border: 1px solid #000; */
+}
+
+.experience-page {
+    font-size: 22rpx;
+    color: rgba(33, 40, 50, 1);
+    opacity: 0.6;
+}
+
+.experience {
+    margin-top: 20rpx;
+    color: rgba(33, 40, 50, 1);
+}
+
+.experience-line {
+    margin-top: 46rpx;
+    width: 554rpx;
+    border: 1rpx solid rgba(112, 112, 112, 1);
+    opacity: 0.1;
+}
+
+.disappear {
+    z-index: -1;
+   opacity: 0;
+   transition: opacity 0.25s ease-in-out;
+}
+
+.appear {
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.book-container-u {
+    margin-top: 82rpx;
+    height: 482rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-wrapper-u {
+    width: 578rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 6rpx 10rpx rgba(0, 0, 0, 0.16);
+    border-radius: 28rpx;
+}
+
+.book-container-u image {
+    width: 208rpx;
+    height: 188rpx;
+}
+
+.book-container-u text {
+    font-weight: bold;
+}
+
+.book-text-u {
+    margin-top: 20rpx;
+    font-size: 26rpx;
+}

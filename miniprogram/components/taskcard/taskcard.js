@@ -1,10 +1,10 @@
-// components/taskcard/taskcard.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-
+    background: String,
+    mode: String,
   },
 
   /**
@@ -19,5 +19,8 @@ Component({
    */
   methods: {
 
+  },
+  options: {
+    multipleSlots: true,
   }
 })

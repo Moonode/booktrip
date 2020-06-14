@@ -28,15 +28,15 @@ Datetime.prototype.getYYYYMMDD = function getYYYYMMDD (dayOffset, monthOffset, y
     return `${year}-${month}-${day}`;
 }
 
-Date.prototype.getDay = function getDay() {
+Datetime.prototype.getDay = function getDay() {
     return this.day;
 }
 
-Date.prototype.getMonth = function getMonth() {
+Datetime.prototype.getMonth = function getMonth() {
     return this.month;
 }
 
-Date.prototype.getYear = function getYear() {
+Datetime.prototype.getYear = function getYear() {
     return this.year;
 }
     

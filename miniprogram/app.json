@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/bookshelf/bookshelf",
     "pages/mail/mail",
-    "pages/plan/plan"
+    "pages/plan/plan",
+    "pages/reading/reading",
+    "pages/checkIn/checkIn"
   ],
   "window": {
     "backgroundColor": "#F1F1F1",
@@ -30,5 +32,11 @@
     ]
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
 }

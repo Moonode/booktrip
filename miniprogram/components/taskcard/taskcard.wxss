@@ -1,1 +1,75 @@
-/* components/taskcard/taskcard.wxss */
+.container {
+    position: relative;
+    width: 578rpx;
+    height: 202rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0rpx 6rpx 10rpx rgba(0, 0, 0, 0.16);
+    border-radius: 14rpx;
+    margin-bottom: 52rpx;
+}
+
+.left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+}
+
+.left image {
+    width: 108rpx;
+    height: 86rpx;
+}
+
+.right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 5;
+}
+
+.top {
+    width: 80%;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.mid {
+    width: 80%;
+    font-size: 20rpx;
+    margin-top: 12rpx;
+}
+
+.bottom {
+    width: 80%;
+    font-size: 20rpx;
+    margin-top: 12rpx;
+}
+
+.bottom-tip {
+    position: absolute;
+    right: 42rpx;
+    bottom: 18rpx;
+    font-size: 20rpx;
+}
+
+.plain {
+    text-align: right;
+}
+
+.achievement {
+    color: #ffffff;
+    text-align: left;
+}
+
+.achievement-top {}
+
+.achievement-mid {}
+
+.achievement-bottom {}
+
+.achievement-bottom-tip {}

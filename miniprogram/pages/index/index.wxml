@@ -2,30 +2,39 @@
     <view class="avatar">
         <image src="{{avatarUrl}}" />
     </view>
+</block>
+<block wx:else>
+    <view class="avatar">
+        未登录
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
+    </view>
+</block>
+
+<block wx:if="{{!empty}}">
     <view class="day" wx:if="{{logined}}">
-        <view class="day-number">{{day}}</view>
+        <view class="day-number">{{book.totalDay}}</view>
         <view class="day-text">阅读天数</view>
     </view>
     <view class="book-container">
         <view class="book-wrapper">
             <view class="book-img-wrapper">
                 <image class="book-img-bookmark" mode="widthFix" src="../../images/book/bookmark.png" />
-                <view class="book-img-text">书签夹在P{{bookmark}}</view>
-                <image class="book-img" src="{{bookImgUrl}}" />
+                <view class="book-img-text">书签夹在P{{book.bookmark}}</view>
+                <image class="book-img" src="{{book.bookInfo.imgUrl}}" />
             </view>
             <view class="book-info-wrapper">
                 <view class="book-info-top">
-                    <view class="book-info-title">今日待读</view>
-                    <view class="book-info-text">{{name}}</view>
+                    <view class="book-info-title">{{complete ? '阅读完成' :'今日待读'}}</view>
+                    <view class="book-info-text">{{book.bookInfo.name}}</view>
                 </view>
                 <view class="book-info-bottom-wrapper">
                     <view class="book-info-bottom">
-                        <view class="book-info-time">今日时长{{duration}}min</view>
+                        <view class="book-info-time">今日时长{{book.timePerDay}}</view>
                         <view class="book-info-progress">
-                            总阅读进度 {{currentProgress}}/{{totalProgress}}
+                            总阅读进度 {{book.bookmark}}/{{book.bookInfo.page}}
                         </view>
                         <view class="book-info-progressbar-wrapper">
-                            <progress class="book-info-progressbar" percent="{{currentProgress / totalProgress * 100}}" border-radius="8" active-color="#707070" background-color="#cbcbcb" active="{{true}}" />
+                            <progress class="book-info-progressbar" percent="{{book.bookmark /  book.bookInfo.page * 100}}" border-radius="8" active-color="#707070" background-color="#cbcbcb" active="{{true}}" />
                         </view>
                         <view class="book-info-changeplan">修改计划</view>
                     </view>
@@ -34,27 +43,31 @@
         </view>
     </view>
     <view class="start-wrapper">
-        <view class="start">开始阅读</view>
+        <view class="start" bindtap="startTap">开始阅读</view>
     </view>
 </block>
 <block wx:else>
-    <view class="avatar">未登录</view>
     <view class="book-container-u">
         <view class="book-wrapper-u">
             <image src="../../images/book/book.png" />
             <view class="book-text-u">来读您的第一本书吧，</view>
             <view class="book-text-u">我们为您准备了丰富的阅读指导</view>
-            <view class="book-text-u">就在<text>右下角信箱中</text>给您的第一封信里哦</view>
+            <view class="book-text-u">
+                就在
+                <text>右下角信箱中</text>
+                给您的第一封信里哦
+            </view>
         </view>
     </view>
     <view class="scan-container">
-        <view class="scan-wrapper" bindtap="importBook">
-            <image src="../../images/book/camera.png"/>
+        <view class="scan-wrapper" bindtap="{{logined ? 'importBook' : ''}}">
+            <image src="../../images/book/camera.png" />
             <text>扫码导入书籍</text>
+            <button bindgetuserinfo="getUserInfo" open-type="getUserInfo" wx:if="{{!logined}}"></button>
         </view>
     </view>
     <view class="isbn-text-wrapper">
-        <image src="../../images/book/question.png"/>
+        <image src="../../images/book/question.png" />
         <text>条码被污染怎么办？ISBN号搜索</text>
     </view>
 </block>

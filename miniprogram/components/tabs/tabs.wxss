@@ -1,0 +1,31 @@
+.container {
+    
+}
+
+.tabs {
+    width: 100%;
+    height: 78rpx;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.title {
+    font-size: 32rpx;
+    margin-right: 26rpx;
+    transition: transform ease-in-out 0.5s;
+    transform: scale(1);
+}
+
+.active {
+    transition: transform ease-in-out 0.5s;
+    transform: scale(1.33);
+}
+
+.line {
+    width: 86rpx;
+    border: 4rpx solid rgba(134, 176, 173, 1);
+    border-radius: 12rpx;
+    transition: margin-left 0.2s ease-in-out;
+}
+

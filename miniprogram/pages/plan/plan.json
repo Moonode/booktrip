@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "picker-cell": "../../components/picker-cell/picker-cell",
+    "picker-column": "../../components/picker-column/picker-column"
+  }
 }

@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="up">
+    <view class="text">
+      <slot class="left" name="left"></slot>
+      <slot class="right" name="right"></slot>
+    </view>
+    <image src="../../images/plan/rightarrow.png"></image>
+  </view>
+  <view class="down"></view>
+</view>

@@ -1,0 +1,40 @@
+.title {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #212832;
+}
+
+.content {
+    margin-bottom: 22rpx;
+    display: flex;
+    justify-content: start;
+    width: 652rpx;
+    margin-top: 22rpx;
+}
+
+.item {
+}
+
+image {
+    width: 164rpx;
+    height: 234rpx;
+    box-shadow: 0rpx 3rpx 5rpx rgba(0, 0, 0, 0.16);
+    border-radius: 10rpx;
+}
+
+.name {
+    margin-top: 16rpx;
+    width: 164rpx;
+    color: #212832;
+    font-size: 22rpx;
+    font-weight: bold;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.margin-left {
+    margin-left: 40rpx;
+}

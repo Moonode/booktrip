@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="title">{{title}}</view>
+  <view class="content">
+    <view class="item {{index % 3 !== 0 ? 'margin-left' : ''}}" wx:for="{{item}}" wx:for-item="i">
+      <image src="{{i.bookInfo.imgUrl}}" bindtap="tapItem" data-index="{{index}}" />
+      <view class="name">{{i.bookInfo.name}}</view>
+    </view>
+  </view>
+</view>

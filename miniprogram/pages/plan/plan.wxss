@@ -104,7 +104,6 @@ camera {
 
 .progressbar-title {
     font-size: 26rpx;
-    color: #ffffff;
     opacity: 0.74;
 }
 
@@ -125,7 +124,6 @@ camera {
 .img-2 {
     width: 388rpx;
     height: 540.44rpx;
-    border: 1px solid #000;
 }
 
 .title-2 {
@@ -163,6 +161,8 @@ camera {
 .refresh-2 image {
     width: 20.36rpx;
     height: 28rpx;
+    border-radius: 20rpx;
+    box-shadow: 0px 6rpx 10rpx rgba(0, 0, 0, 0.16);
 }
 
 .refresh-2 text {
@@ -188,8 +188,10 @@ camera {
 }
 
 .bookinfo-container-3 image {
-    width: 244rpx;
+    width: 222rpx;
     height: 100%;
+    border-radius: 20rpx;
+    box-shadow: 0px 6rpx 10rpx rgba(0, 0, 0, 0.16);
 }
 
 .bookinfo-3 {
@@ -197,17 +199,18 @@ camera {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 300rpx;
+    width: 320rpx;
     height: 100%;
+    margin-left: 30rpx;
 }
 
 .bookinfo-title-3 {
     color: #272525;
-    font-size: 32rpx;
+    font-size: 24rpx;
 }
 
 .bookinfo-text-3 {
-    font-size: 24rpx;
+    font-size: 20rpx;
 }
 
 .white {
@@ -218,3 +221,56 @@ camera {
     color: #212832;
 }
 
+.panel {
+    width: 638rpx;
+    height: 658rpx;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0rpx 6rpx 12rpx rgba(0, 0, 0, 0.16);
+    border-radius: 30rpx;
+}
+
+.tip-text {
+    color: rgba(0, 0, 0, 1);
+    opacity: 0.6;
+}
+
+.complete-date {
+    color: #86B0AD;
+    font-size: 40rpx;
+    margin-top: 24rpx;
+    padding-bottom: 52rpx;
+}
+
+.cell-black {
+    color: rgba(33, 40, 50, 1);
+    opacity: 1;
+}
+
+.cell-white {
+    color: rgba(33, 40, 50, 1);
+    opacity: 0.6;
+}
+
+.picker-container {
+    width: 540rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.complete {
+    width: 244rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-top: 36rpx;
+    text-align: center;
+    background: rgba(151, 192, 189, 1);
+    box-shadow: 0rpx 6rpx 12rpx rgba(0, 0, 0, 0.16);
+    border-radius: 84rpx;
+    font-size: 36rpx;
+    color: #fff;
+}

@@ -1,0 +1,60 @@
+<view class="top-container">
+    <view class="top-wrapper">
+        <image src="../../images/checkIn/good.png" />
+        <view class="top-text-container">
+            <view class="top-text-1">太棒啦！</view>
+            <view class="top-text-2">今日计划完成了！</view>
+        </view>
+    </view>
+</view>
+<view class="panel-container">
+    <view class="panel-wrapper">
+        <view class="panel">
+            <view class="panel-img-container">
+                <image src="{{book.bookInfo.imgUrl}}" class="panel-img" />
+            </view>
+            <view class="panel-text">
+                <view class="panel-text-page">
+                    <text class="text1">本次阅读至</text>
+                    <input focus="auto" maxlength="4" bindinput="input" value="{{page}}"/>
+                    <text class="text2">页</text>
+                </view>
+                <view class="panel-text-name">{{book.bookInfo.name}}</view>
+                <view class="panel-text-bottom">
+                    <view class="panel-text-bottom-1">
+                        <view class="panel-text-bottom-title">上次阅读至</view>
+                        <view class="panel-text-bottom-text">{{book.bookmark}}页</view>
+                    </view>
+                    <view class="panel-text-bottom-2">
+                        <view class="panel-text-bottom-title">阅读时长</view>
+                        <view class="panel-text-bottom-text">{{book.timePerDay}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="calendar-container">
+    <view class="calendar-wrapper">
+        <view class="calendar">
+            <view class="calendar-title">
+                <view>SUN</view>
+                <view>MON</view>
+                <view>TUE</view>
+                <view>WED</view>
+                <view>THU</view>
+                <view>FRI</view>
+                <view>SAT</view>
+            </view>
+            <view class="calendar-content">
+                <view class="calendar-cell {{'calendar-cell-' + item.mode}}" wx:for="{{calendar}}">{{item.day}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="tip-text">已坚持阅读{{num}}天，快去打卡吧~</view>
+<view class="button-container">
+    <view class="button" bindtap="checkIn">打 卡</view>
+</view>

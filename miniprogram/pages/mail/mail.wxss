@@ -1,1 +1,28 @@
-/* miniprogram/pages/mail/mail.wxss */
+tabs {
+    position: relative;
+    width: 578rpx;
+    margin-left: 104rpx;
+    margin-top: 118rpx;
+}
+
+.mail-container {
+    margin-top: 54rpx;
+    margin-left: -20rpx;
+    position: absolute;
+}
+
+.achievement-container {
+    margin-top: 54rpx;
+    margin-left: -20rpx;
+    position: absolute;
+}
+
+.disappear {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.appear {
+    opacity: 1;
+    transition: all 0.5s;
+}

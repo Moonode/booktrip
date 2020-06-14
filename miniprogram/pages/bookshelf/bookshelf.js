@@ -1,11 +1,44 @@
-// miniprogram/pages/bookshelf/bookshelf.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    unfinished: [
 
+    ],
+    finished: [
+      
+    ],
+    bookInfo: {
+      name: '吹推绿隐跳',
+      author: '浪比',
+      page: 522,
+      category: '教学',
+      totalTime: '',
+      totalDay: 0,
+      timePerDay: '',
+      pattern: '精读',
+      experience: {
+        number: 2,
+        detail: [
+          {
+            page: 1,
+            detail: '这什么垃圾书，烧掉！'
+          },
+          {
+            page: 3,
+            detail: '滚犊子！'
+          }
+        ],
+      }
+    },
+    book: {},
+    allBook: {},
+    experience: [],
+    mode: 0,
+    empty: false,
   },
 
   /**
@@ -26,6 +59,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    const userData = wx.getStorageSync('userData');
+    const book = userData.book;
+    const experience = userData.experience;
+    const finished = [];
+    const unfinished = [];
+    book.forEach(element => {      
+      if (element.complete) finished.push(element);
+      else unfinished.push(element);
+    });
+    if (!finished[0] && !unfinished[0]) {
+      this.setData({ empty: true });
+    }
+    this.setData({
+      allBook: book,
+      experience,
+      finished,
+      unfinished
+    });
 
   },
 
@@ -62,5 +113,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  tapItem(e) {
+    const book = e.detail.item;
+    this.setData({
+      book,
+      mode: 1,
+    });
+  },
+  back() {
+    this.setData({ mode: 0 });
   }
 })

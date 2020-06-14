@@ -1,0 +1,29 @@
+<image src="../../images/read/back-black.png" class="back" bindtap="back" />
+<image class="background" src="../../images/read/background.png" />
+<view class="circle-container">
+    <canvas class="progress-bg" canvas-id="progress-bg"></canvas>
+    <canvas class="progress" canvas-id="progress"></canvas>
+    <view class="time">{{minuteStr}}:{{secondStr}}</view>
+    <view class="name">《{{book.bookInfo.name}}》</view>
+    <view class="text">阅读中</view>
+</view>
+<view class="stop-container">
+    <image src="../../images/read/{{pause ? 'continue.png' : 'stop.png'}}" bindtap="pause" />
+</view>
+
+<view class="experience-container {{active ? 'active' : ''}}">
+    <view class="top-container" bindtouchstart="touchstart" bindtouchend="touchend">
+        <view class="top-line"></view>
+        <view class="top-title">阅读笔记</view>
+        <view class="top-page-input" wx:if="{{active}}">
+            <input value="{{page}}" bindinput="pageInput"/>
+            <text>页</text>
+        </view>
+        <view class="top-bottom-line"></view>
+    </view>
+    <view class="bottom-container">
+        <view class="bottom-text-wrapper">
+            <textarea placeholder="在这写下你的所思所想或书中摘录吧" placeholder-style="color: #bcbec1" value="{{value}}" bindinput="textareaInput"></textarea>
+        </view>
+    </view>
+</view>

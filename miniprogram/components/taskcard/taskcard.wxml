@@ -1,2 +1,19 @@
-<!--components/taskcard/taskcard.wxml-->
-<text>components/taskcard/taskcard.wxml</text>
+<view class="container" style="background-color: {{background}}">
+    <view class="left">
+        <slot name="image"></slot>
+    </view>
+    <view class="right {{mode}}">
+        <view class="top {{mode + '-top'}}">
+            <slot name="top"></slot>
+        </view>
+        <view class="mid {{mode + '-mid'}}">
+            <slot name="mid"></slot>
+        </view>
+        <view class="bottom {{mode + '-bottom'}}">
+            <slot name="bottom"></slot>
+        </view>
+        <view class="bottom-tip {{mode + '-bottom-tip'}}">
+            <slot name="bottom-tip"></slot>
+        </view>
+    </view>
+</view>
